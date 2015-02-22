@@ -293,7 +293,7 @@ parentViewController:(UIViewController*)parentViewController
     // [self.plugin returnSuccess:text format:format cancelled:FALSE flipped:FALSE callback:self.callback];
     dispatch_sync(dispatch_get_main_queue(), ^{
         [self barcodeScanDone];
-        [self.plugin returnSuccess:text format:format cancelled:FALSE];
+        [self.plugin returnSuccess:text format:format cancelled:FALSE flipped:FALSE callback:self.callback];
     });    
 }
 
